@@ -1,0 +1,21 @@
+.content-wrapper {
+    background: white; }
+
+#main-content {
+    padding: 2em 3em;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+@media (min-width: 1200px) {
+    .card-columns {
+        column-count: 4; } }
+
+@media (min-width: 1200px){
+    .container {
+        width: 100%;
+        max-width: 100%;  }}
