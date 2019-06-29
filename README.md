@@ -50,5 +50,5 @@ Lorsque les clients vont envoyer leurs messages ils doivent préfixer leurs endp
         return message;
     }`
     
-A chaque fois qu'un client invoque l'url [http://localhost:8082/app/send/message] un message est envoyé 
+A chaque fois qu'un client invoque l'url http://localhost:8082/app/send/message un message est envoyé 
 à tous les clients abonnés au topic **`topic`**
