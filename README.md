@@ -21,7 +21,7 @@
      }}
 _1_
 
-Méthode permettant de définir l'endpoint que nos client utiliseront pour se connecter au serveur
+Méthode permettant de définir l'endpoint que nos clients utiliseront pour se connecter au serveur
 
     http://localhost:8082/socket
  
