@@ -32,7 +32,7 @@ Permet de recevoir les requêtes de n'importe quelle origine.
 _3_
 
 Méthode permettant de configurer nos topics. Nous avons déclaré un seul topic portant le nom **topic**, les 
-client peuvent s'abonner à ce topic pour recevoir les messages du serveur.
+clients peuvent s'abonner à ce topic pour recevoir les messages du serveur.
 
 Lorsque les clients vont envoyer leurs messages ils doivent préfixer leurs endpoints par /app
 
