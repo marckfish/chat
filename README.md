@@ -84,6 +84,47 @@ Permet de s'abonner au topic _**topic/message**_
     
 Permet d'envoyer des messages au serveur
 
-# Shémade l'architecture
+# Schéma de l'architecture
 
-![Alt text](src/main/resources/archi.jpg "Archi")
+![Alt text](lib/archi.jpg "Archi")
+
+#Builder le projet 
+
+_Docker_
+
+Au préalable il faut ajouter le plugin suivant dans le pom.xml
+
+    <plugin>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>jib-maven-plugin</artifactId>
+        <version>1.3.0</version>
+        <configuration>
+            <from>
+                <image>
+                    openjdk:11-jre-slim
+                </image>
+            </from>
+                <to>
+                    <image>client:${project.version}</image>
+                </to>
+            <container>
+                <jvmFlags>
+                    <jvmFlag>-Xms512m</jvmFlag>
+                </jvmFlags>
+            </container>
+        </configuration>
+    </plugin>
+
+Pour builder les images et les pousser sur dockerHub il suffit de taper la commande suivante 
+
+    mvn compile jib:build
+    
+Pour builder les images localement, tapez la commande suivante 
+
+    mvn compile jib:dockerBuild
+    
+Une fois que vous avez fini de builder, lancez la commande suivante 
+
+    docker-compose up
+    
+Ensuite allez sur la page http://localhost:8083

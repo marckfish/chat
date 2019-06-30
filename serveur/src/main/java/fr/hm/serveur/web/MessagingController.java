@@ -1,4 +1,4 @@
-package fr.hm.chat.web;
+package fr.hm.serveur.web;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;

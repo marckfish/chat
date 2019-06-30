@@ -1,4 +1,4 @@
-package fr.hm.chat.config;
+package fr.hm.serveur.config;
 
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;

@@ -1,4 +1,4 @@
-package fr.hm.chat.config.topic;
+package fr.hm.serveur.config.topic;
 
 import lombok.Getter;
 

@@ -1,0 +1,15 @@
+version: "2"
+services:
+  chat-client:
+    image: client:0.0.1-SNAPSHOT
+    ports:
+      - 8083:8083
+    links:
+      - chat-server
+    depends_on:
+      - chat-server
+
+  chat-server:
+    image: server:0.0.1-SNAPSHOT
+    ports:
+      - 8082:8082

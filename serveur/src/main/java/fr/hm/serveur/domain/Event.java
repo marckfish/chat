@@ -1,4 +1,4 @@
-package fr.hm.chat.domain;
+package fr.hm.serveur.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
