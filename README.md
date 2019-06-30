@@ -84,4 +84,6 @@ Permet de s'abonner au topic _**topic/message**_
     
 Permet d'envoyer des messages au serveur
 
-# Lancer l'application  
+# Shémade l'architecture
+
+![Alt text](src/main/resources/archi.jpg "Archi")
