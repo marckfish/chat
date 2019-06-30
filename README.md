@@ -1,4 +1,4 @@
-# chat
+# Serveur
 
 **Classe WebSocketConfig**
 
@@ -8,7 +8,7 @@
      //1   
      @Override
      public void registerStompEndpoints(StompEndpointRegistry registry) {
-         registry.addEndpoint("/socket")
+         registry.addEndpoint("/ws")
          //2 
          .setAllowedOrigins("*")
          .withSockJS();
@@ -51,4 +51,37 @@ Lorsque les clients vont envoyer leurs messages ils doivent préfixer leurs endp
     }`
     
 A chaque fois qu'un client invoque l'url http://localhost:8082/app/send/message un message est envoyé 
-à tous les clients abonnés au topic **`topic`**
+à tous les clients abonnés au topic **`topic/message`**
+
+# Client
+
+    var webSocketProd = new SockJS('http://localhost:8082/ws');
+    
+Permet de se connecter au serveur
+
+    var stompClient = Stomp.over(webSocketProd);
+    
+Permet de créer un client stomp, ce dernier enverra les messages au format STOMP (Streaming Text Oriented Message Protocol)
+
+
+    stompClient.connect({}, this.onConnected.bind(this), this.onError.bind(this));
+    
+Permet de se connecter au serveur
+
+    function onConnected() {
+    
+        this.stompClient.subscribe('/topic/message', this.onMessageReceived);
+    
+    }
+ 
+Permet de s'abonner au topic _**topic/message**_
+
+    function sendMessage (){
+    
+        stompClient.send("/app/send/message" , {}, $('#test').val());
+        $('#test').val('');
+    }   
+    
+Permet d'envoyer des messages au serveur
+
+# Lancer l'application  
